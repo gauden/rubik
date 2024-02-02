@@ -38,12 +38,29 @@ function generateRandomScramble() {
 function displayScramble(scramble) {
     const grid = document.getElementById('scrambleGrid');
     grid.innerHTML = ''; // Clear the grid first
+    // Map each move to a specific color based on the standard Rubik's Cube orientation
+    const colorMap = {
+        'R': 'red',
+        'L': 'orange',
+        'U': 'yellow',
+        'D': 'white',
+        'F': 'green',
+        'B': 'blue'
+    };
+
     scramble.forEach(move => {
         const cell = document.createElement('div');
         cell.textContent = move;
+        // Extract the face involved in the move to determine the cell's background color
+        const moveFace = move.charAt(0);
+        cell.style.backgroundColor = colorMap[moveFace];
+        // Set the text color for maximum legibility
+        cell.style.color = ['R', 'B', 'F'].includes(moveFace) ? 'white' : 'black'; // White text for red, blue, green backgrounds; black otherwise
         grid.appendChild(cell);
     });
 }
+
+
 
 function setScrambleToCookie(scramble) {
     const inOneHour = new Date(new Date().getTime() + 60 * 60 * 1000).toUTCString();
