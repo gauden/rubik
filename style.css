@@ -42,6 +42,8 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    /* Add this line */
     gap: 10px;
     margin-bottom: 20px;
     width: calc(100% - 40px);
@@ -53,6 +55,10 @@ body {
 }
 
 .grid div {
+    width: 90%;
+    /* Adjust this line */
+    height: 90%;
+    /* Adjust this line */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,10 +66,9 @@ body {
     /* This will be overridden by JavaScript */
     aspect-ratio: 1 / 1;
     padding: 10px;
-    font-size: calc(16px + 3vw);
+    font-size: calc(12px + 3vw);
+    /* Adjust this line */
     font-weight: bold;
-    border: 10px solid black;
-    /* Thick border for a Rubik's Cube-like look */
     border-radius: 10px;
     /* Rounded corners */
     box-sizing: border-box;
@@ -73,7 +78,7 @@ body {
 
 button {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     padding: 15px 0;
     cursor: pointer;
@@ -91,10 +96,11 @@ button {
 
 
 button:hover {
-    background-color: #eee;
+    background-color: #FFDAB9;
+    /* Pastel peach */
     /* Darker shade on hover */
-    border-color: #ffffff;
-    /* Add a border color on hover for emphasis */
+    border-color: #FFDAB9;
+    /* Pastel peach */
 }
 
 
