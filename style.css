@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    /* Ensures space around the content */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    /* Increased bottom margin for headroom */
+    width: calc(100% - 40px);
+    /* Adjusts width to match padding */
+    max-width: 600px;
+    margin: 0 auto 20px;
+    /* Adds bottom margin for space above the button */
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    /* Adds padding around the text */
+    font-size: calc(16px + 3vw);
+    /* Dynamically adjust font size for better legibility */
+    font-weight: bold;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect the overall dimensions */
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 0;
+    /* Adjusted padding for better fit */
+    cursor: pointer;
+    width: calc(100% - 40px);
+    /* Matches the grid width */
+    max-width: 600px;
+    /* Ensures button is not wider than the grid */
+    margin: 0 auto;
+    /* Centers the button */
+    display: block;
+    /* Ensures the button takes up the full width */
+}
+
+@media (max-width: 600px) {
+    .grid div {
+        font-size: calc(14px + 2vw);
+        /* Slightly larger font size for smaller screens */
+    }
+}
