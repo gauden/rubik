@@ -1,16 +1,29 @@
+html,
 body {
-    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    /* Ensure body takes at least the viewport height */
     justify-content: center;
     height: 100vh;
     margin: 0;
     padding: 20px;
-    background-color: #333;
+    background-color: #CAF0F8;
     /* Dark background to complement the vibrant colors */
     color: #fff;
     /* White text for contrast */
+    box-sizing: border-box;
+    /* Include padding in the height calculation */
 }
 
 .container {
@@ -49,7 +62,7 @@ body {
     padding: 10px;
     font-size: calc(16px + 3vw);
     font-weight: bold;
-    border: 4px solid #333;
+    border: 10px solid black;
     /* Thick border for a Rubik's Cube-like look */
     border-radius: 10px;
     /* Rounded corners */
@@ -59,7 +72,8 @@ body {
 }
 
 button {
-    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 36px;
     font-weight: bold;
     padding: 15px 0;
     cursor: pointer;
@@ -69,16 +83,18 @@ button {
     /* Adjusted for clarity and spacing */
     background-color: #fff;
     /* Consistent button background */
-    color: #333;
+    color: #111;
     /* Consistent button text color */
-    border: none;
+    border: 3px solid #ccc;
     border-radius: 5px;
 }
 
-/* No hover effect required for visibility, but if you want a subtle effect: */
+
 button:hover {
-    opacity: 0.9;
-    /* Slight opacity change for a hover effect, optional */
+    background-color: #eee;
+    /* Darker shade on hover */
+    border-color: #ffffff;
+    /* Add a border color on hover for emphasis */
 }
 
 
