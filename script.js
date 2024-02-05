@@ -40,8 +40,8 @@ function displayScramble(scramble) {
     grid.innerHTML = ''; // Clear the grid first
     // Map each move to a specific color based on the standard Rubik's Cube orientation
     const colorMap = {
-        'R': 'red',
-        'L': 'orange',
+        'R': 'orange',
+        'L': 'red',
         'U': 'yellow',
         'D': 'white',
         'F': 'green',
