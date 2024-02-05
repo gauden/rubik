@@ -95,10 +95,9 @@ button {
 }
 
 
-button:hover {
+button:active {
     background-color: #FFDAB9;
     /* Pastel peach */
-    /* Darker shade on hover */
     border-color: #FFDAB9;
     /* Pastel peach */
 }
