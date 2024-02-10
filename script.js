@@ -70,7 +70,7 @@ function displayScramble(scramble) {
         const moveFace = move.charAt(0);
         cell.style.backgroundColor = colorMap[moveFace];
         // Set the text color for maximum legibility
-        cell.style.borderColor = move.startsWith('D') ? 'black' : 'white';
+        cell.style.borderColor = move.startsWith('D') ? '#aaa' : 'white';
         grid.appendChild(cell);
     });
 }

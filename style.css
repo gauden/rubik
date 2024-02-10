@@ -83,7 +83,7 @@ body {
     font-size: calc(12px + 3vw);
     /* Adjust this line */
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 20px;
     /* Rounded corners */
     border: 5px solid #999;
     box-sizing: border-box;
@@ -93,25 +93,27 @@ body {
 
 button {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 12px 0;
     cursor: pointer;
     width: 100%;
     max-width: 600px;
     margin: 10px auto 0;
     /* Adjusted for clarity and spacing */
-    background-color: #fff;
+    background-color: #D8BFD8;
     /* Consistent button background */
     color: #111;
     /* Consistent button text color */
-    border-radius: 5px;
+    border-radius: 30px;
+    border: none;
 }
 
 
 button:active {
-    background-color: #D8BFD8;
-    /* Pastel peach */
+    background-color: #3C1053;
+    /* Dark purple */
+    color: #fff;
 }
 
 
