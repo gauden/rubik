@@ -21,6 +21,17 @@ function generateRandomScramble() {
     const modifiers = ['', '\'', '2'];
     let scramble = [];
     let lastMove = '';
+    let secondLastMove = '';
+
+    // Define adjacent faces to ensure a face is moved only after an adjacent face has moved
+    const adjacentFaces = {
+        'R': ['U', 'D', 'F', 'B'],
+        'L': ['U', 'D', 'F', 'B'],
+        'U': ['R', 'L', 'F', 'B'],
+        'D': ['R', 'L', 'F', 'B'],
+        'F': ['U', 'D', 'R', 'L'],
+        'B': ['U', 'D', 'R', 'L']
+    };
 
     while (scramble.length < 25) {
         let move = moves[Math.floor(Math.random() * moves.length)];
@@ -29,8 +40,12 @@ function generateRandomScramble() {
             continue; // Skip this iteration if the move is the same as the last move
         }
         const modifier = modifiers[Math.floor(Math.random() * modifiers.length)];
-        scramble.push(move + modifier);
-        lastMove = move; // Update the lastMove for the next iteration
+        // Check if move is not the same as the last move and the second last move is adjacent to the current move
+        if (move !== lastMove && (move !== secondLastMove || adjacentFaces[move].includes(lastMove))) {
+            scramble.push(move + modifier);
+            secondLastMove = lastMove;  // Update the second last move
+            lastMove = move;            // Update the last move
+        }
     }
     return scramble;
 }
