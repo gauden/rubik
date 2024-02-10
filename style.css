@@ -26,6 +26,21 @@ body {
     /* Include padding in the height calculation */
 }
 
+body {
+    background: radial-gradient(circle at center,
+            #5D3F6A 0%,
+            /* Dark purple */
+            #3C1053 40%,
+            /* Deeper purple */
+            #000000 90%);
+    /* Black */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Keeps the gradient stationary during scrolling */
+    background-size: cover;
+    /* Ensures the gradient covers the entire page */
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -44,11 +59,10 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     /* Add this line */
-    gap: 10px;
-    margin-bottom: 20px;
-    width: calc(100% - 40px);
+    gap: 2px;
+    width: calc(100% - 100px);
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
     width: 100%;
     /* Ensure the grid fills the container */
     margin-bottom: 20px;
@@ -71,8 +85,9 @@ body {
     font-weight: bold;
     border-radius: 10px;
     /* Rounded corners */
+    border: 5px solid #999;
     box-sizing: border-box;
-    color: #333;
+    color: #111;
     /* Text color for readability */
 }
 
@@ -84,21 +99,18 @@ button {
     cursor: pointer;
     width: 100%;
     max-width: 600px;
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     /* Adjusted for clarity and spacing */
     background-color: #fff;
     /* Consistent button background */
     color: #111;
     /* Consistent button text color */
-    border: 3px solid #ccc;
     border-radius: 5px;
 }
 
 
 button:active {
-    background-color: #FFDAB9;
-    /* Pastel peach */
-    border-color: #FFDAB9;
+    background-color: #D8BFD8;
     /* Pastel peach */
 }
 

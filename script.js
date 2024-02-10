@@ -55,12 +55,12 @@ function displayScramble(scramble) {
     grid.innerHTML = ''; // Clear the grid first
     // Map each move to a specific color based on the standard Rubik's Cube orientation
     const colorMap = {
-        'R': 'orange',
-        'L': 'red',
-        'U': 'yellow',
-        'D': 'white',
-        'F': 'green',
-        'B': 'blue'
+        'R': '#FF8C00', // Deeper, more saturated orange
+        'L': '#FF4500', // Deeper, more saturated red
+        'U': '#FADA5E', // Muted yellow
+        'D': '#F5F5F5', // Muted white
+        'F': '#3CB371', // Muted green
+        'B': '#6495ED'  // Muted blue
     };
 
     scramble.forEach(move => {
@@ -70,7 +70,7 @@ function displayScramble(scramble) {
         const moveFace = move.charAt(0);
         cell.style.backgroundColor = colorMap[moveFace];
         // Set the text color for maximum legibility
-        cell.style.color = ['R', 'B', 'F'].includes(moveFace) ? 'white' : 'black'; // White text for red, blue, green backgrounds; black otherwise
+        cell.style.borderColor = move.startsWith('D') ? 'black' : 'white';
         grid.appendChild(cell);
     });
 }
